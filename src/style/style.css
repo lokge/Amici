@@ -149,6 +149,7 @@ button {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
+    color: #9F9F9F;
 }
 
 .post-comments {
