@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    color: #333333;
 }
 
 button {
@@ -20,6 +21,11 @@ button {
     margin: 0 auto;
 }
 
+.main-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
 
 /* posts listing styles */
 
@@ -44,6 +50,10 @@ button {
 .post-comment-container {
     display: flex;
     align-items: center;
+}
+
+.post-comments-counter {
+    color: #818181;
 }
 
 .post-like-button {
