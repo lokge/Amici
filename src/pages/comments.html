@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <main class="main">
+        <section class="comments-section">
+            <h2 id="comments" class="details-comments-title">Комментарии <span class="details-comments-count">15</span></h2>
+                <div class="comments">
+                    <form class="comments-form">
+                        <input type="text" class="comments-input" placeholder="Написать комментарии">
+                        <button class="comments-button"></button>
+                    </form>
+                    <div class="comments-row">
+                        <div class="comment">
+                            <div class="comment-user-info">
+                                <span style="background-image: url(https://cdn.jdpower.com/Average%20Weight%20Of%20A%20Car.jpg)" class="comment-user-image"></span>
+                                <span class="comment-user-name">Superman</span>
+                                <span class="comment-user-date">20.03.2023</span>
+                            </div>
+                            <p class="comment-text">
+                                Отличный автомобиль! Очень доволен всеми его качествами.
+                            </p>
+                            <div class="comment-action">
+                                <button class="comment-like"></button>
+                                <button class="comment-dislike"></button>
+                                <button class="comment-reply">Ответить</button>
+                            </div>
+                        </div>
+                        <div class="comment has-reply hidden">
+                            <div class="comment-user-info">
+                                <span style="background-image: url(https://a.d-cd.net/b3f4ffcs-480.jpg)" class="comment-user-image"></span>
+                                <span class="comment-user-name">Stig</span>
+                                <span class="comment-user-date">20.03.2023</span>
+                            </div>
+                            <p class="comment-text">
+                                Отличный автомобиль! Очень доволен всеми его качествами.
+                            </p>
+                            <div class="comment-action">
+                                <button class="comment-like"></button>
+                                <button class="comment-dislike"></button>
+                                <button class="comment-reply">Ответить</button>
+                            </div>
+                            <div class="comment is-reply hidden">
+                                <div class="comment-user-info">
+                                    <span style="background-image: url(https://static1.squarespace.com/static/6282ec55d5f3c229291fcb47/63cdb2155bc4c44bc1167e55/63cde45ba1562f4679996483/1674437732520/Artboard+2-100.jpg?format=1500w)" class="comment-user-image"></span>
+                                    <span class="comment-user-name">Superman</span>
+                                    <span class="comment-user-date">20.03.2023</span>
+                                </div>
+                                <p class="comment-text">
+                                    Согласен! Ни разу не пожалел о приобретении данного авто!
+                                </p>
+                                <div class="comment-action">
+                                    <button class="comment-like"></button>
+                                    <button class="comment-dislike"></button>
+                                    <button class="comment-reply">Ответить</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment hidden">
+                            <div class="comment-user-info">
+                                <span style="background-image: url(https://i.pinimg.com/564x/e3/42/ee/e342ee28bfcfa2bb18d6e6ce86c0ccea.jpg)" class="comment-user-image"></span>
+                                <span class="comment-user-name">Ironman</span>
+                                <span class="comment-user-date">21.03.2023</span>
+                            </div>
+                            <p class="comment-text">
+                                Хорошая машина, но дороговата.
+                            </p>
+                            <div class="comment-action">
+                                <button class="comment-like"></button>
+                                <button class="comment-dislike"></button>
+                                <button class="comment-reply">Ответить</button>
+                            </div>
+                        </div>
+                        <div class="comment hidden">
+                            <div class="comment-user-info">
+                                <span style="background-image: url(https://i.pinimg.com/564x/f6/7c/c4/f67cc4c512a7d3db16a12fab640e065b.jpg)" class="comment-user-image"></span>
+                                <span class="comment-user-name">Batman</span>
+                                <span class="comment-user-date">22.03.2023</span>
+                            </div>
+                            <p class="comment-text">
+                                Машина неплохая, но расход топлива великоват.
+                            </p>
+                            <div class="comment-action">
+                                <button class="comment-like"></button>
+                                <button class="comment-dislike"></button>
+                                <button class="comment-reply">Ответить</button>
+                            </div>
+                        </div>
+                        <span class="comments-hidden-list">Показать ещё 8 комментариев</span>
+                    </div>
+                </div>
+        </section>
+    </main>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var showCommentsButton = document.querySelector('.comments-hidden-list');
+        showCommentsButton.addEventListener('click', function() {
+            var hiddenComments = document.querySelectorAll('.comment.hidden');
+            var countToShow = 2;
+            for (var i = 0; i < countToShow; i++) {
+                if (hiddenComments[i]) {
+                    hiddenComments[i].classList.remove('hidden');
+                }
+            }
+            hiddenComments = document.querySelectorAll('.comment.hidden');
+            if (hiddenComments.length === 0) {
+                showCommentsButton.style.display = 'none';
+            }
+        });
+    });
+</script>
+</body>
+</html>
